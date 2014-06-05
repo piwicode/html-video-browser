@@ -1,0 +1,36 @@
+body {
+    padding-top: 70px;
+}
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+#video-list li {
+    width: 400px;
+    min-height: 250px;
+    
+    border-radius:5px;
+    box-shadow: 3px 2px 6px  #757575;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px;
+    padding: 10px;
+    zoom: 1;
+    *display: inline;
+    _height: 250px;
+    background: #F0F0F0;
+}
+
+#video-list li video {
+    width: 100%;
+}
+
+#video-list li h1 {
+    font-size: 1.3em;
+    margin: -10px -10px 10px -10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: #C0C0C0;
+}
