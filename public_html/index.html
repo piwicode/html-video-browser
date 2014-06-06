@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- 
 Une application web est constituée trois choses: 
- - le contennu (HTML)
+ - le contenu (HTML)
  - la mise en page (CSS)
  - le comportement (JavaScript)
 
@@ -11,7 +11,7 @@ formulaires an sein d'une structure d'éléments rectangulaires imbriqués.
 Le fichier HTML est composé de paires balises; chaque balise ouvrante "<div>", 
 correspond à une balise fermante "</div>". Entre deux balises peut se trouver du
 texte ou d'autres balises dont le contennu se retrouve inclus dans celui des 
-précédentes. Quand rien n'est contennu entre deux balises il est possible 
+précédentes. Quand rien n'est contenu entre deux balises il est possible 
 d'utiliser la notation abrégée "<input/>" qui équivaut à "<input></input>".
 
 La mise en page est déterminée par les fichiers CSS (Cascading Sheet Style).
@@ -22,13 +22,13 @@ construction de la page, je suis parti d'une CSS par defaut appelée Bootstrap
 application (voir style.css).
 
 Troisième et dernier composant de l'application le JavaScript ou ECMAScript.
-C'est un language qui permet de modifier la page web et de créer des
-comportements. Pour simplifier la constuction de la page j'ai utilisé une 
-bibliotheque nomée jQuery (voir app/js/jquery), à laquelle s'ajoute un 
+C'est un langage qui permet de modifier la page web et de créer des
+comportements. Pour simplifier la construction de la page j'ai utilisé une 
+bibliothèque nommée jQuery (voir app/js/jquery), à laquelle s'ajoute un 
 JavaScript spécifique à notre application (voir script.js).
 
 Quand le navigateur charge cet fichier HTML, il détecte les CSS et JavaScript 
-requis, les télécharges puis interprete les fichiers référencés. Donc tout part 
+requis, les télécharge puis interprète les fichiers référencés. Donc tout part 
 de ce fichier HTML.
 -->
 <html lang="fr">
@@ -43,12 +43,12 @@ de ce fichier HTML.
         <meta name="description" content="Videos de danse">
         <meta name="author" content="">
 
-        <!-- Le tite affiché sur l'onglet correspondant à la page -->
+        <!-- Le titre affiché sur l'onglet correspondant à la page -->
         <title>Video browser</title>
 
         <!-- La liste des CSS utilisées par la page. Les CSS sont interprétées
-        dans l'ordre d'appartition (on peut aussi dire en cascade). Cela rends
-        possible personaliser le résultat de bootstrap. 
+        dans l'ordre d'apparition (on peut aussi dire en cascade). Cela rends
+        possible personnaliser le résultat de bootstrap. 
         -->
         <link href="app/js/twitter-bootstrap/css/bootstrap.css" rel="stylesheet">
         <!-- La feuille de style de l'application -->
@@ -58,11 +58,11 @@ de ce fichier HTML.
     <body>
         <!-- Bandeau d'entête horizontal
         Il est constitué de balise `div` imbriquées. Chaque balise occupe une 
-        zone rectangulaire qui contient le contennu placé entre les balises.
+        zone rectangulaire qui contient le contenu placé entre les balises.
         Les attributs `class` tels que `class="navbar ..."` établissent un lien
         entre les éléments HTML et les styles définis dans les CSS. Ainsi en 
         référencant le style `navbar` on s'assure que le bandeau d'entête reste 
-        visible en haut de la page meme si on défile vers la bas. Le style 
+        visible en haut de la page même si on défile vers la bas. Le style 
         `navbar` est défini par bootstrap.
         -->        
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -71,27 +71,27 @@ de ce fichier HTML.
                     <a class="navbar-brand" href="#">Video Browser</a>
                 </div>
                 <div>
-                    <!-- Bare de recherche
+                    <!-- Barre de recherche
                     La balise `input` correspond à un contrôle dans lequel est 
-                    tapée la recherche. L'identifieur `search-bar` est associé à 
+                    tapée la recherche. L'identifiant `search-bar` est associé à 
                     cette balise ce qui permettra au JavaScript de s'enregistrer
-                    pour être executé à chaque fois que l'utilisateur change le 
-                    contennu.
+                    pour être exécuté à chaque fois que l'utilisateur change le 
+                    contenu.
                     
                     Une vidéo est affichée si sont titre ou sa description 
-                    contient un ou plusieur des mots saisis par l'utilisateur.
+                    contient un ou plusieurs des mots saisis par l'utilisateur.
                     -->
                     <form class="navbar-form navbar-left" role="form">
                         <div class="form-group">
                             <input type="text" id="search-bar" placeholder="search video" class="form-control">
                         </div>
                     </form>
-                </div>
-                <!-- Bare de status
-                La bare de status permet d'afficher un message contennant le 
-                nombre de vidéo correspondant à la recherche. L'identifieur 
+                </div
+                <!-- Barre de statu
+                La barre de statu permet d'afficher un message contenant le 
+                nombre de vidéo correspondant à la recherche. L'identifiant
                 `status` est associé à cette balise ce qui permettra au 
-                JavaScript d'y inserer du texte.
+                JavaScript d'y insérer du texte.
                 -->
                 <div id="status" class="navbar-text navbar-right">
                 </div>
@@ -99,33 +99,33 @@ de ce fichier HTML.
         </div>
         <!-- Corps de la page
         A l'interieur de cette balise se trouve le corps de la page, la
-        vignettes de chaque vidéo et le message affiché quand auccune video ne
+        vignettes de chaque vidéo et le message affiché quand aucune vidéo ne
         correspond à la recherche.
         -->
         <div class="container">
             
             <!-- Ce bloc défini le message affiché quand aucune vidéo ne 
-            correspond à la recherche. L'attribute `style="display: none;"`
-            signifie que ce bloc et son contennu sont invisible. C'est le 
+            correspond à la recherche. L'attribut `style="display: none;"`
+            signifie que ce bloc et son contenu sont invisible. C'est le 
             JavaScript qui contrôle son apparition en le désignant par sont 
-            identifieur `no-video-message`
+            identifiant `no-video-message`
             -->
             <div id="no-video-message" class="starter-template" style="display: none;">
                 <!-- `h1` délimite un titre alors que `p` délimite un paragraphe.
-                La balise `br` correspond à un reoutr à la ligne. -->
+                La balise `br` correspond à un retour à la ligne. -->
                 <h1>Pas de video</h1>
                 <p class="lead">Aucune video de correspond à votre requête.<br>
                     Veuillez ajouter des mots à la recherche.</p>
             </div>
 
             <!-- Liste des vidéos
-            `ul` signifier list non ordonnées. Une balise `ul` contient une 
-            paire de balises `li` à l'interieur de laquelle est décrite la video.
+            `ul` signifier liste non ordonnées. Une balise `ul` contient une 
+            paire de balises `li` à l'intérieur de laquelle est décrite la vidéo.
             -->
             <ul id="video-list">
                 <li>
-                    <!-- La video est contituée d'un titre, d'un lien vers le
-                    fichier video, et d'une description. -->
+                    <!-- La vidéo est constituée d'un titre, d'un lien vers le
+                    fichier vidéo, et d'une description. -->
                     <h1>Vélo</h1>
                     <video controls="controls">
                         <source src="video/gizmo.mp4" type="video/mp4" />
@@ -147,7 +147,7 @@ de ce fichier HTML.
                     <video controls="controls">
                         <source src="video/gizmo.mp4" type="video/mp4" />
                     </video>
-                    <div>bleu caré plat</div>
+                    <div>bleu carré plat</div>
                 </li>
                 
                 <!-- Ajouter ici les video supplémentaires -->
@@ -156,7 +156,7 @@ de ce fichier HTML.
         </div><!-- /.container -->
 
         <!-- La liste des JavaScript utilisés par l'application.
-        Les fichiers javascripts sont executés dans l'ordre de déclaration, et 
+        Les fichiers JavaScripts sont exécutés dans l'ordre de déclaration, et 
         ont l'opportunité de s'enregistrer sur des événements qui se produisent 
         sur la page comme la modification du champ de recherche.
         
